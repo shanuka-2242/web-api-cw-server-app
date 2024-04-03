@@ -3,8 +3,10 @@ const app = express()
 const mongoose = require('mongoose')
 const WeatherInfoModel = require('./models/weatherDataModel')
 const port = 5000
+const cors = require('cors')
 
 app.use(express.json())
+app.use(cors())
 
 //DB Connect
 mongoose.connect('mongodb+srv://root:root@webapi.fgpmolr.mongodb.net/web-api-project?retryWrites=true&w=majority&appName=WEBAPI')
